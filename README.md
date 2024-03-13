@@ -77,3 +77,13 @@ module.exports = {
   },
 };
 ```
+
+## git 설명서
+
+```
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/mintchacha/React-Typescript-Free.git
+git push -u origin main
+```
