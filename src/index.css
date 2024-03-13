@@ -1,0 +1,146 @@
+:root {
+  font-size: 16px;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+
+  padding: 2rem 2rem 2rem 14.5rem;
+
+  text-align: center;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "NEXON";
+  font-weight: normal;
+  src: url("./assets/fonts/NEXONLv1GothicOTF.woff") format("woff");
+}
+@font-face {
+  font-family: "NEXON";
+  font-weight: bold;
+  src: url("./assets/fonts/NEXONLv1GothicOTFBold.woff") format("woff");
+}
+@font-face {
+  font-family: "NEXON";
+  font-weight: light;
+  src: url("./assets/fonts/NEXONLv1GothicOTFLight.woff") format("woff");
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  font-weight: bold;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  font-family: "NEXON";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+h1 {
+  margin-bottom: 1rem;
+}
+h1 a {
+  /* display: block; */
+}
+h2 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+button:hover {
+  background-color: #483aca;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #646cff;
+  }
+}
+
+input,
+textarea {
+  outline: none;
+  padding: 5px;
+  border: 1px solid #646cff;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* 헤더 */
+header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  padding: 2rem 0;
+  background-color: #ddd;
+}
+header ul {
+  display: grid;
+  grid-template-columns: minmax(12.5rem, 1fr);
+}
+header ul li a {
+  padding: 1rem;
+  display: block;
+  transition: 0.3s;
+}
+header ul li a:hover,
+header ul li a:focus {
+  background-color: #ccc;
+}
+
+/* 서브페이지 헤더 */
+.sub_header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4rem, auto));
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
