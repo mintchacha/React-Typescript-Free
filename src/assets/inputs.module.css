@@ -12,3 +12,15 @@
 .input_wrap01 button {
   width: 100%;
 }
+.input_wrap01 > form {
+  margin-bottom: 5rem;
+}
+.input_wrap01 > article {
+  background-color: #ddd;
+}
+.input_wrap01 > article > div {
+  border-bottom: 1px solid #333;
+}
+.input_wrap01 > article > div:last-child {
+  border: 0;
+}

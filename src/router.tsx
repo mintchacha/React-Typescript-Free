@@ -8,9 +8,9 @@ import Inputs from "./components/Inputs";
 import TypeScript from "./components/TypeScript";
 
 const router = createBrowserRouter([
-  { path: "/", element: <App /> },
+  { path: "/2024", element: <App /> },
   {
-    path: "inputs",
+    path: "/2024/inputs",
     element: <Inputs />,
     children: [
       { path: "input01", element: <Input01 /> },
@@ -18,11 +18,11 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "typescript",
+    path: "/2024/typescript",
     element: <TypeScript />,
   },
   {
-    path: "game",
+    path: "/2024/game",
     element: <Game />,
   },
 ]);

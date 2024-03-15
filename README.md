@@ -4,6 +4,7 @@
 
 - react-router-dom
 - styled-component
+- react-icons
 
 ## ESLint 설정
 
@@ -81,6 +82,10 @@ module.exports = {
 ## git 설명서
 
 ```
+게행문자 처리
+win : config --global core.autocrlf true
+mac : $ git config --global core.autocrlf false
+
 git add README.md
 git commit -m "first commit"
 git branch -M main
