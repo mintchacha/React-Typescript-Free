@@ -4,6 +4,9 @@
   max-width: 480px;
   margin: 0 auto;
 }
+.input_wrap01 h2 {
+  margin-bottom: 3rem;
+}
 .input_wrap01 input,
 .input_wrap01 textarea {
   width: 100%;
@@ -17,6 +20,9 @@
 }
 .input_wrap01 > article {
   background-color: #ddd;
+}
+.input_wrap01 > article > h3 {
+  border-bottom: 1px solid #333;
 }
 .input_wrap01 > article > div {
   border-bottom: 1px solid #333;

@@ -82,13 +82,23 @@ module.exports = {
 ## git 설명서
 
 ```
+편집 이탈키 : q
+
 게행문자 처리
-win : config --global core.autocrlf true
+win : git config --global core.autocrlf true
 mac : $ git config --global core.autocrlf false
 
 git add README.md
 git commit -m "first commit"
-git branch -M main
 git remote add origin https://github.com/mintchacha/React-Typescript-Free.git
-git push -u origin main
+git pull origin main
+git push origin main
+
+git checkout main
+git pull origin main
+git merge 작업브랜치명
+git branch -D 작업브랜치명
+git branch 생성할브랜치명 복사할브랜치
+
+git revert 커밋이름 (git log로 확인)
 ```

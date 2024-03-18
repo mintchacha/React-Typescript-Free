@@ -5,6 +5,7 @@ import Game from "./components/Game";
 import Input01 from "./components/Input01";
 import Input02 from "./components/Input02";
 import Inputs from "./components/Inputs";
+import NotFound from "./components/NotFound.tsx";
 import TypeScript from "./components/TypeScript";
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/2024/game",
     element: <Game />,
+  },
+  {
+    path: "/*",
+    element: <NotFound />,
   },
 ]);
 

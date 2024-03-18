@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 import inputsStyle from "../assets/inputs.module.css";
+import { StyledModal01 } from "./Ui/Layout";
 
 const Input01: React.FC = () => {
   const commentCount = useRef(1);
@@ -20,6 +21,12 @@ const Input01: React.FC = () => {
   const submit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
+    if (comment.name == "") {
+      alert("123");
+    } else {
+      return false;
+    }
+
     setCommentList([
       ...commentList,
       {
@@ -28,6 +35,7 @@ const Input01: React.FC = () => {
       },
     ]);
     commentCount.current += 1;
+    setModalState(!modalState);
   };
 
   const inputChanged = (
@@ -41,8 +49,15 @@ const Input01: React.FC = () => {
     });
   };
 
+  const [modalState, setModalState] = useState(false);
+  const modal = useRef<HTMLDivElement>(null);
+  const submitCheck = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    setModalState(!modalState);
+  };
   return (
     <section className={inputsStyle.input_wrap01}>
+      <h2>Input01</h2>
       <form action="./input01" method="get">
         <div>
           <input
@@ -60,13 +75,10 @@ const Input01: React.FC = () => {
             value={comment.content}
           />
         </div>
-        <button onClick={submit}>확인</button>
+        <button onClick={submitCheck}>확인</button>
       </form>
       <article>
-        <div>
-          <p>작성자 : {comment.name}</p>
-          <p>내용 : {comment.content}</p>
-        </div>
+        <h3>List</h3>
         {commentList
           ? commentList.map((item, index) => {
               return (
@@ -78,6 +90,20 @@ const Input01: React.FC = () => {
             })
           : null}
       </article>
+
+      {modalState ? (
+        <StyledModal01 ref={modal}>
+          <h3>이 내용으로 커밋하시겠습니까?</h3>
+          <p>작성자 : {comment.name}</p>
+          <p>내용 : {comment.content}</p>
+          <div>
+            <button onClick={submit}>네</button>
+            <button className="red" onClick={submitCheck}>
+              아니요
+            </button>
+          </div>
+        </StyledModal01>
+      ) : null}
     </section>
   );
 };
