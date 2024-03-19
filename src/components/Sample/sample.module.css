@@ -11,6 +11,11 @@
 .input_wrap01 textarea {
   width: 100%;
   margin-bottom: 1rem;
+  color: #333;
+}
+.input_wrap01 input:focus,
+.input_wrap01 textarea:focus {
+  border: 1px solid red;
 }
 .input_wrap01 button {
   width: 100%;
@@ -29,4 +34,10 @@
 }
 .input_wrap01 > article > div:last-child {
   border: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .input_wrap01 > article {
+    color: #213547;
+  }
 }

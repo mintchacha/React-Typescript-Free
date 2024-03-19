@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.title {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  background-color: #fffada;
+}
+.issue section {
+  margin: 0 auto 3rem;
+}
+.issue section > h3 {
+  font-size: 1.5em;
+  text-align: left;
+  margin: 1rem 0;
+}
+.issue section > ul > li {
+  position: relative;
+  text-align: left;
+  padding-left: 2rem;
+}
+.issue section > ul > li:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #f9ce9b;
+}
+@media all and (max-width: 460px) {
+}
+
+@media (prefers-color-scheme: dark) {
+  .title {
+    color: #213547;
+  }
+}

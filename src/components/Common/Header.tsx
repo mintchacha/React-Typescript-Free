@@ -34,19 +34,22 @@ const Header = () => {
           <StyledCloseIcon />
         </button>
         <h1>
-          <Link to="/2024">
+          <Link to="/React-Typescript-Free">
             <StyledHomeIcon />
           </Link>
         </h1>
         <ul>
           <li>
-            <Link to="/2024/inputs">Hooks</Link>
+            <Link to="/React-Typescript-Free/inputs/input01">Sample</Link>
           </li>
           <li>
-            <Link to="/2024/typescript">Typescript</Link>
+            <Link to="/React-Typescript-Free/typescript/issue">Typescript</Link>
           </li>
           <li>
-            <Link to="/2024/game">Game</Link>
+            <Link to="/React-Typescript-Free/application">App</Link>
+          </li>
+          <li>
+            <Link to="/React-Typescript-Free/game">Game</Link>
           </li>
         </ul>
       </header>

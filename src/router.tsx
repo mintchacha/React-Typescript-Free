@@ -1,30 +1,41 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import App from "./App.tsx";
+import Application from "./components/Application.tsx";
 import Game from "./components/Game";
-import Input01 from "./components/Input01";
-import Input02 from "./components/Input02";
-import Inputs from "./components/Inputs";
 import NotFound from "./components/NotFound.tsx";
-import TypeScript from "./components/TypeScript";
+import Input01 from "./components/Sample/Input01.tsx";
+import Input02 from "./components/Sample/Input02.tsx";
+import Sample from "./components/Sample/Sample.tsx";
+import Issue from "./components/Typescript/Issue.tsx";
+import TypeScript from "./components/Typescript/TypeScript.tsx";
+import UseRef from "./components/Typescript/UseRef.tsx";
 
 const router = createBrowserRouter([
-  { path: "/2024", element: <App /> },
+  { path: "/React-Typescript-Free", element: <App /> },
   {
-    path: "/2024/inputs",
-    element: <Inputs />,
+    path: "/React-Typescript-Free/inputs",
+    element: <Sample />,
     children: [
       { path: "input01", element: <Input01 /> },
       { path: "input02/:id", element: <Input02 /> },
     ],
   },
   {
-    path: "/2024/typescript",
+    path: "/React-Typescript-Free/typescript/",
     element: <TypeScript />,
+    children: [
+      { path: "issue", element: <Issue /> },
+      { path: "useRef", element: <UseRef /> },
+    ],
   },
   {
-    path: "/2024/game",
+    path: "/React-Typescript-Free/game",
     element: <Game />,
+  },
+  {
+    path: "/React-Typescript-Free/application",
+    element: <Application />,
   },
   {
     path: "/*",

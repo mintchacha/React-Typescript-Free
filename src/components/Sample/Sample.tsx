@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 
-import Header from "./Common/Header";
-import { StyledBlueButton, StyledRedButton } from "./Ui/Button";
+import Header from "../Common/Header";
+import { StyledBlueButton, StyledRedButton } from "../Ui/Button";
 
 const Inputs = () => {
   return (

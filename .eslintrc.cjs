@@ -14,10 +14,12 @@ module.exports = {
     "import/resolver": {
       node: {
         extensions: [".js", ".jsx", ".ts", ".tsx"],
+        paths: ["src"],
       },
     },
   },
   rules: {
+    "@typescript-eslint/no-explicit-any": ["off"],
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
@@ -64,5 +66,6 @@ module.exports = {
         },
       },
     ],
+    "import/no-unresolved": "off",
   },
 };

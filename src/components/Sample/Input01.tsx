@@ -1,17 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 
-import inputsStyle from "../assets/inputs.module.css";
-import { StyledModal01 } from "./Ui/Layout";
+import { StyledModal01 } from "@components/Ui/Layout";
+import sampleStyle from "./sample.module.css";
 
-const Input01: React.FC = () => {
+const Input01 = () => {
   const commentCount = useRef(1);
+  const nameBox = useRef<any>();
+  const contentBox = useRef<any>();
 
   type comment = { id: number; name: string; content: string };
   const [comment, setComment] = useState({
     name: "",
     content: "",
   });
-
   const [commentList, setCommentList] = useState<comment[]>([]);
 
   useEffect(() => {
@@ -21,9 +22,15 @@ const Input01: React.FC = () => {
   const submit = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    if (comment.name == "") {
-      alert("123");
-    } else {
+    if (comment.name.trim() == "") {
+      alert("이름을 입력해주세요");
+      setModalState(!modalState);
+      nameBox.current.focus();
+      return false;
+    } else if (comment.content == "") {
+      alert("내용을 입력해주세요");
+      setModalState(!modalState);
+      contentBox.current!.focus();
       return false;
     }
 
@@ -56,7 +63,7 @@ const Input01: React.FC = () => {
     setModalState(!modalState);
   };
   return (
-    <section className={inputsStyle.input_wrap01}>
+    <section className={sampleStyle.input_wrap01}>
       <h2>Input01</h2>
       <form action="./input01" method="get">
         <div>
@@ -65,6 +72,8 @@ const Input01: React.FC = () => {
             id="name"
             onInput={inputChanged}
             value={comment.name}
+            placeholder="이름"
+            ref={nameBox}
           />
         </div>
         <div>
@@ -73,6 +82,8 @@ const Input01: React.FC = () => {
             id="content"
             onInput={inputChanged}
             value={comment.content}
+            placeholder="내용"
+            ref={contentBox}
           />
         </div>
         <button onClick={submitCheck}>확인</button>

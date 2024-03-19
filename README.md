@@ -2,9 +2,12 @@
 
 이 프로젝트에 사용된 모듈
 
+- eslint-plugin-import
 - react-router-dom
 - styled-component
 - react-icons
+- gh-pages
+- @types/node
 
 ## ESLint 설정
 
@@ -29,6 +32,7 @@ module.exports = {
     },
   },
   rules: {
+    "@typescript-eslint/no-explicit-any": ["off"],
     "react-refresh/only-export-components": [
       "warn",
       { allowConstantExport: true },
@@ -75,6 +79,7 @@ module.exports = {
         },
       },
     ],
+    "import/no-unresolved": "off",
   },
 };
 ```
