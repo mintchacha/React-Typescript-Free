@@ -1,39 +1,105 @@
 @charset "utf-8";
 
+/* 공통 스타일 */
 .title {
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   margin-bottom: 3rem;
   background-color: #fffada;
 }
-.issue section {
-  margin: 0 auto 3rem;
+.title p {
+  margin: 0;
+  margin-top: 1rem;
 }
-.issue section > h3 {
-  font-size: 1.5em;
-  text-align: left;
-  margin: 1rem 0;
+
+.codebox {
+  color: #2df9fc;
+  padding: 1rem;
+  background-color: #333;
 }
-.issue section > ul > li {
+.codebox div {
+  margin-bottom: 1em;
+}
+.codebox p {
+  margin: 0;
+}
+.codebox .type {
+  color: #3ad94f;
+}
+.codebox .annotation {
+  color: #adadad;
+}
+
+.list-style01 > li {
   position: relative;
   text-align: left;
-  padding-left: 2rem;
+  padding-left: 1rem;
+  margin-bottom: 3rem;
 }
-.issue section > ul > li:after {
+.list-style01 > li:after {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  width: 0.25rem;
+  height: 1rem;
+  background-color: #e98850;
+}
+.list-style01 > li > h4 {
+  margin-bottom: 0.5rem;
+}
+.list-style01 > li > p {
+  line-height: 1.8em;
+}
+
+.list-style02 {
+  margin-bottom: 2rem;
+}
+.list-style02 > li {
+  position: relative;
+  text-align: left;
+  padding-left: 1rem;
+}
+.list-style02 > li:after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0.8rem;
+  left: 0;
   transform: translateY(-50%);
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 50%;
+  width: 0.3rem;
+  height: 0.3rem;
   background-color: #f9ce9b;
 }
+
+.content-wrap {
+  text-align: left;
+  margin: 0 auto 3rem;
+}
+.content-wrap h3 {
+  font-size: 1.5em;
+  color: #313691;
+  margin: 1rem 0;
+}
+
+/* issue */
+.issue section > a {
+  text-decoration: underline;
+}
+
+/* useState */
+.useState button {
+  margin-left: 10px;
+}
+
 @media all and (max-width: 460px) {
 }
 
 @media (prefers-color-scheme: dark) {
   .title {
     color: #213547;
+  }
+
+  .issue > section h3,
+  .useRef > section h3 {
+    color: #afa1ff;
   }
 }

@@ -1,7 +1,7 @@
 const Input02 = () => {
   return (
     <div>
-      <h1>input 01</h1>
+      <h1>input 02</h1>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
       <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>

@@ -9,7 +9,9 @@ import Input02 from "./components/Sample/Input02.tsx";
 import Sample from "./components/Sample/Sample.tsx";
 import Issue from "./components/Typescript/Issue.tsx";
 import TypeScript from "./components/Typescript/TypeScript.tsx";
+import UseEffect from "./components/Typescript/UseEffect.tsx";
 import UseRef from "./components/Typescript/UseRef.tsx";
+import UseState from "./components/Typescript/UseState.tsx";
 
 const router = createBrowserRouter([
   { path: "/React-Typescript-Free", element: <App /> },
@@ -27,6 +29,8 @@ const router = createBrowserRouter([
     children: [
       { path: "issue", element: <Issue /> },
       { path: "useRef", element: <UseRef /> },
+      { path: "useState", element: <UseState /> },
+      { path: "useEffect", element: <UseEffect /> },
     ],
   },
   {

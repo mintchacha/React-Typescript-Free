@@ -9,7 +9,6 @@ import Header from "./components/Common/Header.tsx";
 function App() {
   const [count, setCount] = useState(0);
   const name: string = "hello";
-
   return (
     <>
       <Header />
@@ -32,7 +31,12 @@ function App() {
             count is {count}
           </button>
           <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
+            <a
+              href="https://github.com/mintchacha/React-Typescript-Free"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={AppStyles.giticon}
+            ></a>
           </p>
         </div>
         <p className={AppStyles["read-the-docs"]}>

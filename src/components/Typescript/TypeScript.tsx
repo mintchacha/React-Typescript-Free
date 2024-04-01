@@ -15,6 +15,12 @@ const TypeScript = () => {
         <li>
           <StyledBlueButton to="./useRef">useRef</StyledBlueButton>
         </li>
+        <li>
+          <StyledBlueButton to="./useState">useState</StyledBlueButton>
+        </li>
+        <li>
+          <StyledBlueButton to="./useEffect">useEffect</StyledBlueButton>
+        </li>
       </ul>
       <Outlet />
     </>
