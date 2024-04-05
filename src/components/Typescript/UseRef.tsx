@@ -1,13 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import typeScriptStyle from "./typescript.module.css";
 
 const UseRef = () => {
   const ref = useRef<HTMLHeadingElement>(null);
-  const f = false;
-  useEffect(() => {
-    console.log(false && "one");
-    console.log(f && "one" ? "one" : "two");
-  }, []);
 
   return (
     <article className={typeScriptStyle["useRef"]}>

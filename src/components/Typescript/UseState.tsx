@@ -19,17 +19,6 @@ const UseState = () => {
     });
   };
 
-  const test = {
-    name: "홍길동",
-    phone: "010-1111-1111",
-  };
-  const copytest = test;
-
-  copytest.name = "박찬호";
-
-  console.log("test : ", test, " / copytest : ", copytest);
-  console.log(copytest == test);
-
   return (
     <article className={typeScriptStyle.useState}>
       <div className={typeScriptStyle.title}>
@@ -110,26 +99,28 @@ const UseState = () => {
             <div className={typeScriptStyle["codebox"]}>
               <div>
                 <p>{`type user = { id: number; name: string; phone: string };`}</p>
-                <p>{`const [user, setUser] = useState<comment[]>({`}</p>
+                <p>{`const [userList, setUserList] = useState<user[]>([{`}</p>
                 <p>&nbsp;&nbsp;{`id : 1,`}</p>
                 <p>&nbsp;&nbsp;{`name : "홍길동",`}</p>
                 <p>&nbsp;&nbsp;{`phone : 010-1111-1111,`}</p>
-                <p>{`});`}</p>
-              </div>
-              <div>
-                <p>{`const nameChange = () => {`}</p>
-                <p>&nbsp;&nbsp;{`setUser({)`}</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;{`...user,`}</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;{`name : "박찬호"`}</p>
-                <p>&nbsp;&nbsp;{`})`}</p>
-                <p>{`}`}</p>
+                <p>{`}]);`}</p>
               </div>
               <p>
                 <span className={typeScriptStyle.annotation}>
-                  // 이름 : {user.name}
+                  // 객체배열에 객체 추가하기
                 </span>
-                <button onClick={nameChange}>setState 예시02</button>
               </p>
+              <div>
+                <p>{`const nameChange = () => {`}</p>
+                <p>&nbsp;&nbsp;{`setUserList([`}</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;{`...userList,`}</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;{`{`}</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`...user,`}</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`name : "박찬호"`}</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;{`}`}</p>
+                <p>&nbsp;&nbsp;{`])`}</p>
+                <p>{`}`}</p>
+              </div>
             </div>
           </li>
         </ul>

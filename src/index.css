@@ -116,6 +116,7 @@ textarea {
   position: fixed;
   top: 2rem;
   left: 2rem;
+  z-index: 1000;
   display: none;
   width: 3rem;
   height: 3rem;
@@ -166,18 +167,18 @@ header ul li a:focus {
 
 /* 서브페이지 헤더 */
 .sub_header {
+  margin-bottom: 5rem;
+}
+.sub_header > ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(8rem, auto));
   gap: 1rem;
-  margin-bottom: 5rem;
+}
+.sub_header > p {
+  text-align: left;
 }
 
-@media all and (max-width: 1080px) {
-  .sub_header {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media all and (max-width: 460px) {
+@media all and (max-width: 768px) {
   :root {
     padding: 6rem 2rem 2rem;
     font-size: 14px;
@@ -204,8 +205,54 @@ header ul li a:focus {
     display: inline-block;
   }
 
-  .sub_header {
+  .sub_header .select-menu {
+    position: relative;
+    padding: 10px 0;
+    border: 2px solid #2df9fc;
+    transition: 0.3s;
+  }
+  .sub_header .select-menu:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    width: 5px;
+    height: 5px;
+    transform: translateY(-70%) rotate(135deg);
+    border-top: 3px solid #0f2f4b;
+    border-right: 3px solid #0f2f4b;
+    transition: 0.3s;
+  }
+  .sub_header > ul {
+    height: 0;
+    overflow: hidden;
     grid-template-columns: 1fr;
+    gap: 0;
+    transition: 0.3s;
+    box-sizing: border-box;
+  }
+  .sub_header .select-menu.active {
+    border: 0;
+    color: #fff;
+    background-color: #0f2f4b;
+  }
+  .sub_header .select-menu.active:after {
+    transform: translateY(-30%) rotate(675deg);
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+  }
+  .sub_header > ul > li > a {
+    color: #0f2f4b;
+    border: 1px solid #0f2f4b;
+    border-bottom: 0;
+    border-radius: 0;
+    background: #fff;
+  }
+  .sub_header > ul > li:last-child > a {
+    border-bottom: 1px solid #0f2f4b;
+  }
+  .sub_header > p {
+    text-align: center;
   }
 }
 
